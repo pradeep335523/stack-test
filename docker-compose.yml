@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+  server:
+    build: .
+    command: python app.py
+    ports:
+      - target: 5000
+        published: 5000
+  database:
+    image: "redis:alpine"
